@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Youssef Gadiri — أحذية جلد طبيعي</title>
+  <meta name="description" content="Youssef Gadiri — أحذية جلد طبيعي 100%، ضد الماء، توصيل مجاني لجميع المدن والدفع عند الاستلام." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Cpath d='M14 26l6-12 8 9 4-11 4 11 8-9 6 12z' fill='%23d9b46a'/%3E%3Ctext x='32' y='54' font-family='Georgia' font-size='20' text-anchor='middle' fill='%23d9b46a'%3EYG%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=El+Messiri:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ================= CINEMATIC LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__curtain loader__curtain--top"></div>
+    <div class="loader__curtain loader__curtain--bottom"></div>
+    <div class="loader__stage">
+      <div class="loader__beam"></div>
+      <svg class="loader__mark" viewBox="0 0 160 160" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg-loader" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f6e2b0" />
+            <stop offset=".5" stop-color="#d9b46a" />
+            <stop offset="1" stop-color="#9c7434" />
+          </linearGradient>
+        </defs>
+        <circle class="loader__ring" cx="80" cy="80" r="74" />
+        <circle class="loader__ring loader__ring--inner" cx="80" cy="80" r="66" />
+        <path class="loader__crown" d="M44 70 L52 40 L66 56 L80 30 L94 56 L108 40 L116 70 Z" />
+        <path class="loader__crown loader__crown--base" d="M46 78 H114" />
+        <text class="loader__yg" x="80" y="120" text-anchor="middle">YG</text>
+      </svg>
+      <div class="loader__brand">
+        <span class="loader__name">YOUSSEF&nbsp;GADIRI</span>
+        <span class="loader__tag">جلد طبيعي · صنعة راقية</span>
+      </div>
+      <div class="loader__progress"><span id="loaderBar"></span></div>
+      <div class="loader__count"><span id="loaderCount">0</span>%</div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ================= TOP BAR + HEADER ================= -->
+  <div class="topbar">
+    <div class="topbar__track">
+      <span>🚚 التوصيل مجاني لجميع المدن</span>
+      <span>💵 الدفع عند الاستلام</span>
+      <span>✦ جلد طبيعي 100% — ضد الماء</span>
+      <span>📍 الدار البيضاء — الحسنية، المسيرة، حدا SPAR</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="icon-btn header__burger" id="burger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#top" class="logo" aria-label="Youssef Gadiri">
+        <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="22.5" fill="none" stroke="url(#lg-gold)" stroke-width="1.4" />
+          <path d="M13 22 L16 12 L21 18 L24 9 L27 18 L32 12 L35 22 Z" fill="url(#lg-gold)" />
+          <text x="24" y="37" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="12.5" fill="url(#lg-gold)">YG</text>
+        </svg>
+        <span class="logo__text">
+          <b>YOUSSEF GADIRI</b>
+          <small>Genuine Leather</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#collection" data-filter-link="all">المجموعة</a>
+        <a href="#collection" data-filter-link="men">رجال</a>
+        <a href="#collection" data-filter-link="women">نساء</a>
+        <a href="#craft">الصنعة</a>
+        <a href="#store">المحل</a>
+        <a href="#faq">الأسئلة</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="openSearch" aria-label="البحث">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="openCart" aria-label="السلة">
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="mmenu" id="mmenu">
+    <nav>
+      <a href="#collection" data-filter-link="all">المجموعة</a>
+      <a href="#collection" data-filter-link="men">رجال</a>
+      <a href="#collection" data-filter-link="women">نساء</a>
+      <a href="#craft">الصنعة</a>
+      <a href="#store">المحل</a>
+      <a href="#faq">الأسئلة</a>
+    </nav>
+    <a class="btn btn--gold mmenu__wa" data-wa="general" href="#">اطلب فالواتساب</a>
+  </div>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <canvas class="hero__dust" id="dust"></canvas>
+      <div class="hero__bgword" aria-hidden="true">GADIRI</div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow reveal-hero" style="--d:.05s">مجموعة الشتاء 2026</span>
+          <h1 class="hero__title">
+            <span class="line"><span class="reveal-hero" style="--d:.15s">جلد طبيعي.</span></span>
+            <span class="line"><span class="reveal-hero" style="--d:.3s">ضد الماء.</span></span>
+            <span class="line"><span class="reveal-hero gold-text" style="--d:.45s">وأناقة ما كتتعاودش.</span></span>
+          </h1>
+          <p class="hero__lead reveal-hero" style="--d:.6s">
+            صبابط وبوط مصنوعين من الجلد الطبيعي 100%، مريحين طول النهار ومقاومين للشتا.
+            اختار الموديل، اختار المقاس، والطلب كيوصلك حتى لباب الدار — والخلاص عند الاستلام.
+          </p>
+          <div class="hero__ctas reveal-hero" style="--d:.75s">
+            <a href="#collection" class="btn btn--gold magnetic">تسوق المجموعة
+              <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+            </a>
+            <a href="#" class="btn btn--ghost magnetic" data-wa="general">
+              <svg viewBox="0 0 24 24" class="wa-ic"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 9.2c.3 2.6 2.9 5.2 5.6 5.6l1.3-1.3-1.8-.9-.8.8c-.9-.4-2-1.5-2.4-2.4l.8-.8-.9-1.8z"/></svg>
+              اطلب فالواتساب
+            </a>
+          </div>
+          <ul class="hero__stats reveal-hero" style="--d:.9s">
+            <li><b data-count="100">0</b><span>% جلد طبيعي</span></li>
+            <li><b>350</b><span>درهم فقط</span></li>
+            <li><b>0</b><span>درهم توصيل</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal-hero" style="--d:.35s">
+          <div class="frame" id="heroFrame">
+            <div class="frame__border"></div>
+            <div class="frame__media" id="heroMedia"></div>
+            <div class="frame__shine"></div>
+            <div class="chip chip--a"><i>✦</i> جلد طبيعي 100%</div>
+            <div class="chip chip--b"><i>💧</i> ضد الماء</div>
+            <div class="frame__price"><small>ابتداءً من</small><b>350</b><span>درهم</span></div>
+          </div>
+          <div class="swatches" id="heroSwatches" aria-label="الألوان"></div>
+        </div>
+      </div>
+      <a href="#collection" class="hero__scroll" aria-label="انزل للمجموعة"><span></span></a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>جلد طبيعي 100%</span><i>✦</i><span>ضد الماء</span><i>✦</i><span>توصيل مجاني لجميع المدن</span><i>✦</i><span>الدفع عند الاستلام</span><i>✦</i><span>YOUSSEF GADIRI</span><i>✦</i>
+        <span>جلد طبيعي 100%</span><i>✦</i><span>ضد الماء</span><i>✦</i><span>توصيل مجاني لجميع المدن</span><i>✦</i><span>الدفع عند الاستلام</span><i>✦</i><span>YOUSSEF GADIRI</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ================= COLLECTION ================= -->
+    <section class="section collection" id="collection">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">المجموعة</span>
+          <h2 class="section__title">اختار الموديل ديالك</h2>
+          <p class="section__sub">كل موديل متوفر بعدة ألوان ومقاسات. ضغط على المنتج باش تشوف التفاصيل وتختار المقاس.</p>
+        </div>
+
+        <div class="filters reveal" id="filters" role="tablist">
+          <button class="filter is-active" data-filter="all" role="tab">الكل <sup id="cnt-all"></sup></button>
+          <button class="filter" data-filter="men" role="tab">رجال <sup id="cnt-men"></sup></button>
+          <button class="filter" data-filter="women" role="tab">نساء <sup id="cnt-women"></sup></button>
+          <span class="filters__ink" id="filtersInk"></span>
+        </div>
+
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= CRAFT / SPOTLIGHT ================= -->
+    <section class="section craft" id="craft">
+      <div class="craft__bg" data-parallax style="background-image:url('images/hero-forest.jpg')"></div>
+      <div class="craft__shade"></div>
+      <div class="container craft__inner">
+        <div class="craft__copy reveal">
+          <span class="eyebrow">الصنعة</span>
+          <h2 class="section__title">مصنوع باش يعيش معاك</h2>
+          <p class="section__sub">ماشي غير حذاء زوين — هو جلد طبيعي مختار، خياطة متينة، ونعل مريح كيشد فالأرض. لبسو فالخدمة، فالسفر، وفنهار الشتا بلا ما تخاف عليه.</p>
+          <ul class="craft__list">
+            <li class="reveal" style="--d:.05s"><span class="craft__ic">01</span><div><b>جلد طبيعي 100%</b><p>كيتنفس، كيتلين مع الرجل، وكيزيد يزيان مع الوقت.</p></div></li>
+            <li class="reveal" style="--d:.15s"><span class="craft__ic">02</span><div><b>ضد الماء</b><p>مقاوم للشتا والبلل، والرجل ديالك كتبقى ناشفة.</p></div></li>
+            <li class="reveal" style="--d:.25s"><span class="craft__ic">03</span><div><b>نعل مريح وثابت</b><p>نعل سميك كيمتص الضغط وكيشد مزيان فالأرض.</p></div></li>
+            <li class="reveal" style="--d:.35s"><span class="craft__ic">04</span><div><b>تشطيب راقي</b><p>خياطة نقية وتفاصيل كتبين الجودة من أول نظرة.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PERKS ================= -->
+    <section class="section perks">
+      <div class="container perks__grid">
+        <div class="perk reveal" style="--d:0s">
+          <svg viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+          <b>توصيل مجاني</b><span>لجميع المدن المغربية</span>
+        </div>
+        <div class="perk reveal" style="--d:.08s">
+          <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>
+          <b>الدفع عند الاستلام</b><span>كتخلص ملي توصلك السلعة</span>
+        </div>
+        <div class="perk reveal" style="--d:.16s">
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <b>جلد طبيعي 100%</b><span>جودة مضمونة</span>
+        </div>
+        <div class="perk reveal" style="--d:.24s">
+          <svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/></svg>
+          <b>ضد الماء</b><span>مناسب لفصل الشتا</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORE ================= -->
+    <section class="section store" id="store">
+      <div class="container store__grid">
+        <div class="store__media reveal">
+          <img src="images/p-slipon.jpg" alt="علبة Youssef Gadiri" loading="lazy" />
+          <div class="store__badge">Youssef Gadiri<small>Casablanca</small></div>
+        </div>
+        <div class="store__copy reveal" style="--d:.1s">
+          <span class="eyebrow">زورونا</span>
+          <h2 class="section__title">جرب المقاس فالمحل</h2>
+          <p class="section__sub">بغيتي تشوف الجلد بعينيك وتجرب المقاس قبل ما تشري؟ مرحبا بيك فالمحل ديالنا.</p>
+          <ul class="store__info">
+            <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><b>العنوان</b><span>الدار البيضاء — الحسنية، المسيرة، حدا SPAR</span></div></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+              <div><b>الهاتف / واتساب</b><span dir="ltr">06 02 02 60 88</span></div></li>
+          </ul>
+          <div class="store__ctas">
+            <a class="btn btn--gold magnetic" href="https://www.google.com/maps/search/?api=1&query=Hassania+Al+Massira+SPAR+Casablanca" target="_blank" rel="noopener">افتح فالخريطة</a>
+            <a class="btn btn--ghost magnetic" href="tel:+212602026088">عيط لينا</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section faq" id="faq">
+      <div class="container faq__wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow">الأسئلة</span>
+          <h2 class="section__title">عندك سؤال؟</h2>
+        </div>
+        <div class="faq__list" id="faqList">
+          <details class="qa reveal"><summary>كيفاش ندير الطلب؟</summary><p>اختار الموديل واللون والمقاس، زيدو للسلة، ومن بعد عمر الاسم والهاتف والمدينة. الطلب كيتصيفط لينا نيشان فالواتساب، وكنتاصلو بيك باش نأكدو معاك.</p></details>
+          <details class="qa reveal"><summary>شحال كيكلف التوصيل؟</summary><p>التوصيل مجاني لجميع المدن المغربية.</p></details>
+          <details class="qa reveal"><summary>كيفاش نخلص؟</summary><p>الدفع عند الاستلام: كتخلص غير ملي توصلك السلعة وتشوفها بعينيك.</p></details>
+          <details class="qa reveal"><summary>ما عرفتش شمن مقاس ناخد؟</summary><p>شوف <button class="link-btn" data-open-size>دليل المقاسات</button>، ولا صيفط لينا فالواتساب طول رجلك بالسنتيمتر ونعاونوك تختار.</p></details>
+          <details class="qa reveal"><summary>واش الجلد طبيعي بصح؟</summary><p>إيه، الجلد طبيعي 100% ومقاوم للماء. ومرحبا بيك فالمحل فالدار البيضاء تشوفو وتجربو.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <h2>المقاس ديالك كيتسناك.</h2>
+        <p>الكمية محدودة فكل مقاس — اطلب دابا والتوصيل علينا.</p>
+        <a href="#collection" class="btn btn--gold magnetic">تسوق الآن</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22.5" fill="none" stroke="url(#lg-gold)" stroke-width="1.4" />
+            <path d="M13 22 L16 12 L21 18 L24 9 L27 18 L32 12 L35 22 Z" fill="url(#lg-gold)" />
+            <text x="24" y="37" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="12.5" fill="url(#lg-gold)">YG</text>
+          </svg>
+          <span class="logo__text"><b>YOUSSEF GADIRI</b><small>Genuine Leather</small></span>
+        </a>
+        <p>أحذية جلد طبيعي 100%، ضد الماء، مع التوصيل المجاني والدفع عند الاستلام.</p>
+      </div>
+      <div>
+        <h4>المتجر</h4>
+        <a href="#collection" data-filter-link="men">رجال</a>
+        <a href="#collection" data-filter-link="women">نساء</a>
+        <a href="#" data-open-size>دليل المقاسات</a>
+      </div>
+      <div>
+        <h4>تواصل</h4>
+        <a href="#" data-wa="general">واتساب</a>
+        <a href="tel:+212602026088" dir="ltr">06 02 02 60 88</a>
+        <a href="#store">الدار البيضاء — الحسنية</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Youssef Gadiri. جميع الحقوق محفوظة.</span>
+      <span>تصميم <a href="https://www.bmdesign.dev" target="_blank" rel="noopener">BM Design</a></span>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP ================= -->
+  <a href="#" class="wa-float" data-wa="general" aria-label="واتساب">
+    <svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></svg>
+    <span class="wa-float__tip">سولنا فالواتساب</span>
+  </a>
+
+  <button class="to-top" id="toTop" aria-label="للفوق"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button>
+
+  <!-- ================= SEARCH ================= -->
+  <div class="search" id="search" aria-hidden="true">
+    <div class="search__box">
+      <input type="search" id="searchInput" placeholder="قلب على موديل، لون..." autocomplete="off" />
+      <button class="icon-btn" data-close aria-label="سد"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search__results" id="searchResults"></div>
+  </div>
+
+  <!-- ================= PRODUCT MODAL ================= -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel pmodal" role="dialog" aria-modal="true">
+      <button class="icon-btn modal__close" data-close aria-label="سد"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="pmodal__gallery">
+        <div class="pmodal__main" id="pmMain"></div>
+        <div class="pmodal__thumbs" id="pmThumbs"></div>
+      </div>
+      <div class="pmodal__info">
+        <span class="eyebrow" id="pmCat"></span>
+        <h3 class="pmodal__title" id="pmTitle"></h3>
+        <div class="pmodal__price"><b id="pmPrice"></b> <span>درهم</span> <em>التوصيل مجاني</em></div>
+        <p class="pmodal__desc" id="pmDesc"></p>
+
+        <div class="opt">
+          <div class="opt__label">اللون: <b id="pmColorName"></b></div>
+          <div class="opt__colors" id="pmColors"></div>
+        </div>
+        <div class="opt">
+          <div class="opt__label">المقاس: <b id="pmSizeName">اختار المقاس</b> <button class="link-btn" data-open-size>دليل المقاسات</button></div>
+          <div class="opt__sizes" id="pmSizes"></div>
+          <div class="opt__err" id="pmSizeErr">عافاك اختار المقاس أولاً</div>
+        </div>
+        <div class="opt opt--row">
+          <div class="qty" id="pmQty">
+            <button data-q="-1" aria-label="نقص">−</button><span>1</span><button data-q="1" aria-label="زيد">+</button>
+          </div>
+          <button class="btn btn--gold btn--block" id="pmAdd">زيد للسلة</button>
+        </div>
+        <button class="btn btn--light btn--block" id="pmBuy">اشري دابا — الدفع عند الاستلام</button>
+        <a href="#" class="pmodal__wa" id="pmWa">عندك سؤال على هاد الموديل؟ سولنا فالواتساب</a>
+        <ul class="pmodal__perks">
+          <li>✦ جلد طبيعي 100%</li><li>✦ ضد الماء</li><li>✦ توصيل مجاني</li><li>✦ الدفع عند الاستلام</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIZE GUIDE ================= -->
+  <div class="modal" id="sizeModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel smodal" role="dialog" aria-modal="true">
+      <button class="icon-btn modal__close" data-close aria-label="سد"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <h3>دليل المقاسات</h3>
+      <p>حط رجلك على ورقة، علّم من الكعب حتى لأطول صبع، وقيس بالسنتيمتر. من بعد قارن مع الجدول.</p>
+      <table class="stable">
+        <thead><tr><th>المقاس (EU)</th><th>طول الرجل (سم)</th></tr></thead>
+        <tbody>
+          <tr><td>36</td><td>23</td></tr><tr><td>37</td><td>23.7</td></tr><tr><td>38</td><td>24.3</td></tr>
+          <tr><td>39</td><td>25</td></tr><tr><td>40</td><td>25.7</td></tr><tr><td>41</td><td>26.3</td></tr>
+          <tr><td>42</td><td>27</td></tr><tr><td>43</td><td>27.7</td></tr><tr><td>44</td><td>28.3</td></tr><tr><td>45</td><td>29</td></tr>
+        </tbody>
+      </table>
+      <p class="smodal__note">ما زال متردد؟ صيفط لينا القياس فالواتساب ونعاونوك.</p>
+    </div>
+  </div>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div class="drawer" id="cart" aria-hidden="true">
+    <div class="drawer__backdrop" data-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="السلة">
+      <div class="drawer__head">
+        <h3>السلة <span id="cartHeadCount"></span></h3>
+        <button class="icon-btn" data-close aria-label="سد"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer__ship"><span>🚚 التوصيل مجاني لجميع المدن</span></div>
+      <div class="drawer__items" id="cartItems"></div>
+      <div class="drawer__foot" id="cartFoot">
+        <div class="sum"><span>المجموع الفرعي</span><b id="cartSub">0 درهم</b></div>
+        <div class="sum"><span>التوصيل</span><b class="free">مجاني</b></div>
+        <div class="sum sum--total"><span>المجموع</span><b id="cartTotal">0 درهم</b></div>
+        <button class="btn btn--gold btn--block" id="toCheckout">كمل الطلب — الدفع عند الاستلام</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ================= CHECKOUT ================= -->
+  <div class="modal" id="checkout" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel cmodal" role="dialog" aria-modal="true">
+      <button class="icon-btn modal__close" data-close aria-label="سد"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+
+      <div class="cmodal__step" id="coForm">
+        <h3>معلومات التوصيل</h3>
+        <p class="cmodal__sub">عمر المعلومات ديالك وغادي نتاصلو بيك باش نأكدو الطلب.</p>
+        <form id="orderForm" novalidate>
+          <label class="field"><span>الاسم الكامل</span><input name="name" required autocomplete="name" placeholder="مثال: يوسف العلوي" /><em>عافاك دخل الاسم</em></label>
+          <label class="field"><span>رقم الهاتف</span><input name="phone" required inputmode="tel" autocomplete="tel" placeholder="06XXXXXXXX" dir="ltr" /><em>الرقم خاصو يكون 10 أرقام ويبدا بـ 05 / 06 / 07</em></label>
+          <label class="field"><span>المدينة</span>
+            <select name="city" required>
+              <option value="">اختار المدينة</option>
+              <option>الدار البيضاء</option><option>الرباط</option><option>سلا</option><option>تمارة</option><option>المحمدية</option>
+              <option>مراكش</option><option>فاس</option><option>مكناس</option><option>طنجة</option><option>تطوان</option>
+              <option>أكادير</option><option>وجدة</option><option>القنيطرة</option><option>الجديدة</option><option>آسفي</option>
+              <option>بني ملال</option><option>خريبكة</option><option>سطات</option><option>برشيد</option><option>الناظور</option>
+              <option>العيون</option><option>مدينة أخرى</option>
+            </select><em>عافاك اختار المدينة</em></label>
+          <label class="field"><span>العنوان</span><input name="address" required autocomplete="street-address" placeholder="الحي، الزنقة، الرقم" /><em>عافاك دخل العنوان</em></label>
+          <label class="field"><span>ملاحظة (اختياري)</span><input name="note" placeholder="مثال: عيطو قبل ما تجيو" /></label>
+
+          <div class="co-summary" id="coSummary"></div>
+          <button class="btn btn--gold btn--block" type="submit">أكد الطلب</button>
+          <p class="cmodal__fine">ملي تأكد، الطلب كيتصيفط لينا فالواتساب. الخلاص عند الاستلام.</p>
+        </form>
+      </div>
+
+      <div class="cmodal__step cmodal__done" id="coDone" hidden>
+        <svg class="done-check" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-23"/></svg>
+        <h3>شكراً! الطلب ديالك توصل</h3>
+        <p>رقم الطلب: <b id="orderId"></b></p>
+        <p class="cmodal__sub">غادي نتاصلو بيك قريب باش نأكدو التوصيل. إلا ما تحلش الواتساب بوحدو، ضغط هنا:</p>
+        <a class="btn btn--gold btn--block" id="waConfirm" href="#" target="_blank" rel="noopener">صيفط الطلب فالواتساب</a>
+        <button class="btn btn--ghost btn--block" data-close>رجع للمتجر</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared gradient for inline logos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="lg-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f6e2b0" /><stop offset=".5" stop-color="#d9b46a" /><stop offset="1" stop-color="#9c7434" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
